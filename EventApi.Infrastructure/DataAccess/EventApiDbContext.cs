@@ -3,9 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EventApi.Infrastructure.DataAccess;
 
-public class EventDbContext : DbContext
+public class EventApiDbContext : DbContext
 {
     public DbSet<Event> Events { get; set; }
+    public DbSet<User> Users { get; set; }
 
-    public EventDbContext(DbContextOptions<EventDbContext> options) : base(options) { } 
+    public EventApiDbContext(DbContextOptions<EventApiDbContext> options) : base(options) { } 
 }
