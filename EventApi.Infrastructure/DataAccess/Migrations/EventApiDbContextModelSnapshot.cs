@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace EventApi.Infrastructure.Migrations
+namespace EventApi.Infrastructure.DataAccess.Migrations
 {
     [DbContext(typeof(EventApiDbContext))]
     partial class EventApiDbContextModelSnapshot : ModelSnapshot

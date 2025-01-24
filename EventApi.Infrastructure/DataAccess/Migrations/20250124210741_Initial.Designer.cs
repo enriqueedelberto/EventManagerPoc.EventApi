@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace EventApi.Infrastructure.Migrations
+namespace EventApi.Infrastructure.DataAccess.Migrations
 {
     [DbContext(typeof(EventApiDbContext))]
-    [Migration("20250115230513_Initial")]
+    [Migration("20250124210741_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
