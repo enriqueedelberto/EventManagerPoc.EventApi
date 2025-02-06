@@ -54,18 +54,18 @@ public static class Startup
 
             // Adds documentation to endpoints based on C# type attribution in the generated XML file.
             // (The generated file is named in the csproj project definition and is generated with builds.)
-            options.IncludeXmlComments("Properties/Command.Core.xml", true);
+            options.IncludeXmlComments("Properties/EventApi.xml", true);
 
             // Including details from the project readme markdown file in swagger.
             var assembly = Assembly.GetExecutingAssembly();
-            using var readmeResource = assembly.GetManifestResourceStream("Command.Core.readme.md");
+            using var readmeResource = assembly.GetManifestResourceStream("EventApi.WebApi.readme.md");
             using var readmeStream = new StreamReader(readmeResource);
 
             // Creates documentation for the version.
             // (Ideally this would loop for versions.)
             options.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "Commands Core Service",
+                Title = "Event Api",
                 Version = "v1",
                 Description = readmeStream.ReadToEnd()
             });
