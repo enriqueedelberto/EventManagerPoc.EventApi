@@ -15,7 +15,11 @@ public class Invitation
     [Required]
     [MaxLength(100)]
     [EmailAddress]
-    public string User { get; set; }
+    public string UserEmail { get; set; }
+
+    [Required]
+    [MaxLength(100)]
+    public string UserName { get; set; }
 
     [Required]
     [MaxLength(100)]
