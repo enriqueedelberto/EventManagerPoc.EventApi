@@ -4,6 +4,7 @@ using EventApi.Infrastructure.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventApi.Infrastructure.DataAccess.Migrations
 {
     [DbContext(typeof(EventApiDbContext))]
-    partial class EventApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250821195146_AddedInvitationsTable")]
+    partial class AddedInvitationsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
